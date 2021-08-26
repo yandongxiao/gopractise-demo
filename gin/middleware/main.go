@@ -1,6 +1,27 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"net/http"
+
+	"github.com/gin-gonic/gin"
+)
+
+var (
+	content = ""
+)
+
+func hello(c *gin.Context) {
+	if content == "" {
+		c.JSON(http.StatusOK, "ok")
+	} else {
+		c.JSON(http.StatusOK, content)
+	}
+	content = ""
+}
+
+func middle(c *gin.Context) {
+	content = "middleware"
+}
 
 func main() {
 	// 创建一个不带任何中间件的路由
@@ -15,22 +36,20 @@ func main() {
 	r.Use(gin.Recovery())
 
 	// 对于每一个路由，如果有需要，可以添加多个中间件
-	r.GET("/benchmark", MyBenchLogger(), benchEndpoint)
+	r.GET("/benchmark", hello)
 
 	// 授权组
 	// authorized := r.Group("/", AuthRequired())
 	// 也可以这样
 	authorized := r.Group("/")
 	// 在这个示例中，我们使用了一个自定义的中间件 AuthRequired()，该中间件只作用于 authorized 组
-	authorized.Use(AuthRequired())
+	authorized.Use(middle)
 	{
-		authorized.POST("/login", loginEndpoint)
-		authorized.POST("/submit", submitEndpoint)
-		authorized.POST("/read", readEndpoint)
+		authorized.POST("/hello", hello)
 
 		// 嵌套组
 		testing := authorized.Group("testing")
-		testing.GET("/analytics", analyticsEndpoint)
+		testing.GET("/analytics", hello)
 	}
 
 	// 监听并服务于0.0.0.0:8080

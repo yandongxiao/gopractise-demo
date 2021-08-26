@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:release" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d2248771-8339-42a8-a5ea-6b22850e7a84" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gopractise-demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cobra/newApp/newApp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin/multiple-service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin/multiple-service/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gorm/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/gorm/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin/middleware/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin/middleware/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin/multiple-service/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/gin/multiple-service/https/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin/multiple-service/allinone/ca.pem" beforeDir="false" afterPath="$PROJECT_DIR$/gin/multiple-service/https/ca.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin/multiple-service/allinone/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin/multiple-service/https/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin/multiple-service/allinone/server.key" beforeDir="false" afterPath="$PROJECT_DIR$/gin/multiple-service/https/server.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin/multiple-service/allinone/server.pem" beforeDir="false" afterPath="$PROJECT_DIR$/gin/multiple-service/https/server.pem" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +58,25 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/gin/multiple-service/https" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -53,9 +87,13 @@
       <screen x="303" y="-1440" width="2560" height="1440" />
     </state>
     <state width="750" height="600" key="SwitcherDM/0.0.1440.900/303.-1440.2560.1440@303.-1440.2560.1440" timestamp="1629955625361" />
-    <state x="1080" y="-1440" width="1005" height="1466" key="search.everywhere.popup" timestamp="1629960424816">
+    <state x="1142" y="-1119" width="882" height="798" key="find.popup" timestamp="1629961686644">
       <screen x="303" y="-1440" width="2560" height="1440" />
     </state>
-    <state x="1080" y="-1440" width="1005" height="1466" key="search.everywhere.popup/0.0.1440.900/303.-1440.2560.1440@303.-1440.2560.1440" timestamp="1629960424816" />
+    <state x="1142" y="-1119" width="882" height="798" key="find.popup/0.0.1440.900/303.-1440.2560.1440@303.-1440.2560.1440" timestamp="1629961686644" />
+    <state x="1080" y="-1440" width="1005" height="1466" key="search.everywhere.popup" timestamp="1629961431841">
+      <screen x="303" y="-1440" width="2560" height="1440" />
+    </state>
+    <state x="1080" y="-1440" width="1005" height="1466" key="search.everywhere.popup/0.0.1440.900/303.-1440.2560.1440@303.-1440.2560.1440" timestamp="1629961431841" />
   </component>
 </project>
