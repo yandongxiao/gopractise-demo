@@ -15,7 +15,7 @@ var (
 
 func router01() http.Handler {
 	e := gin.New()
-	e.Use(gin.Recovery())
+	e.Use(gin.Recovery())       // 用于 recover panic 的 middleware
 	e.GET("/", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{"code": http.StatusOK, "error": "Welcome server 01"})
 	})

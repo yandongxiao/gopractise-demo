@@ -9,13 +9,21 @@ import (
 	"gorm.io/gorm"
 )
 
+// 首先定义了一个 GORM 模型（Models）
+// GORM 使用模型（Models）来映射一个数据库表。默认情况下，使用 ID 作为主键，
+// 使用结构体名的 snake_cases 作为表名，使用字段名的 snake_case 作为列名，
+// 并使用 CreatedAt、UpdatedAt、DeletedAt 字段追踪创建、更新和删除时间。
 type Product struct {
+	// Models 是标准的 Go struct，是数据库中的常见字段
 	gorm.Model
 	Code  string `gorm:"column:code"`
 	Price uint   `gorm:"column:price"`
 }
 
 // TableName maps to mysql table name.
+// 我们可以给 Models 添加 TableName 方法，来告诉 GORM 该 Models 映射到数据库中的哪张表。
+// 如果没有指定表名，则 GORM 使用结构体名的蛇形复数作为表名。
+// TODO(ydx): 例如：结构体名为 DockerInstance ，则表名为 dockerInstances。 这个举例可能是错误的。
 func (p *Product) TableName() string {
 	return "product"
 }
@@ -53,6 +61,7 @@ func main() {
 	}
 
 	// 1. Auto migration for given models
+	// 如果 Product 中有新增字段或索引，则相应地变更表结构
 	db.AutoMigrate(&Product{})
 
 	// 2. Insert the value into database
@@ -75,6 +84,8 @@ func main() {
 	PrintProducts(db)
 
 	// 5. Delete value match given conditions
+	// 因为 Product 中有 gorm.DeletedAt 字段，所以，上述删除操作不会真正把记录从数据库表中删除掉，
+	// 而是通过设置数据库 product 表 deletedAt 字段为当前时间的方法来删除。
 	if err := db.Where("code = ?", "D42").Delete(&Product{}).Error; err != nil {
 		log.Fatalf("Delete product error: %v", err)
 	}
@@ -85,7 +96,11 @@ func main() {
 func PrintProducts(db *gorm.DB) {
 	products := make([]*Product, 0)
 	var count int64
-	d := db.Where("code like ?", "%D%").Offset(0).Limit(2).Order("id desc").Find(&products).Offset(-1).Limit(-1).Count(&count)
+	d := db.Where("code like ?", "%D%").
+		Offset(0).Limit(2).
+		Order("id desc").Find(&products).
+		Offset(-1).Limit(-1).
+		Count(&count)
 	if d.Error != nil {
 		log.Fatalf("List products error: %v", d.Error)
 	}
