@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -11,6 +12,7 @@ var (
 )
 
 func hello(c *gin.Context) {
+	log.Println("in hello")
 	if content == "" {
 		c.JSON(http.StatusOK, "ok")
 	} else {
@@ -19,10 +21,21 @@ func hello(c *gin.Context) {
 	content = ""
 }
 
+// 你在 middleware 中没有调用c.Next()，默认这些操作在Handle之前执行
 func middle(c *gin.Context) {
-	content = "middleware"
+	if content == "" {
+		content = "middleware"
+	}
 }
 
+// 下面的操作在 middleware 之前执行
+func auth(c *gin.Context) {
+	if content == "" {
+		content = "auth"
+	}
+}
+
+// 常见middleware: https://static001.geekbang.org/resource/image/67/10/67137697a09d9f37bd87a81bf322f510.jpg?wh=1832x1521
 func main() {
 	// 创建一个不带任何中间件的路由
 	r := gin.New()
@@ -40,8 +53,7 @@ func main() {
 
 	// 授权组
 	// authorized := r.Group("/", AuthRequired())
-	// 也可以这样
-	authorized := r.Group("/")
+	authorized := r.Group("/", gin.BasicAuth(gin.Accounts{"foo": "bar", "colin": "colin404"}))
 	// 在这个示例中，我们使用了一个自定义的中间件 AuthRequired()，该中间件只作用于 authorized 组
 	authorized.Use(middle)
 	{
