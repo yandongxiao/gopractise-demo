@@ -27,11 +27,7 @@
     <list default="true" id="d2248771-8339-42a8-a5ea-6b22850e7a84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gin/middleware/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin/middleware/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin/multiple-service/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/gin/multiple-service/https/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin/multiple-service/allinone/ca.pem" beforeDir="false" afterPath="$PROJECT_DIR$/gin/multiple-service/https/ca.pem" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin/multiple-service/allinone/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin/multiple-service/https/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin/multiple-service/allinone/server.key" beforeDir="false" afterPath="$PROJECT_DIR$/gin/multiple-service/https/server.key" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin/multiple-service/allinone/server.pem" beforeDir="false" afterPath="$PROJECT_DIR$/gin/multiple-service/https/server.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin/multiple-service/https/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin/multiple-service/https/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,13 +83,13 @@
       <screen x="303" y="-1440" width="2560" height="1440" />
     </state>
     <state width="750" height="600" key="SwitcherDM/0.0.1440.900/303.-1440.2560.1440@303.-1440.2560.1440" timestamp="1629955625361" />
-    <state x="1142" y="-1119" width="882" height="798" key="find.popup" timestamp="1629961686644">
+    <state x="1142" y="-1119" width="882" height="798" key="find.popup" timestamp="1629980630555">
       <screen x="303" y="-1440" width="2560" height="1440" />
     </state>
-    <state x="1142" y="-1119" width="882" height="798" key="find.popup/0.0.1440.900/303.-1440.2560.1440@303.-1440.2560.1440" timestamp="1629961686644" />
-    <state x="1080" y="-1440" width="1005" height="1466" key="search.everywhere.popup" timestamp="1629961431841">
+    <state x="1142" y="-1119" width="882" height="798" key="find.popup/0.0.1440.900/303.-1440.2560.1440@303.-1440.2560.1440" timestamp="1629980630555" />
+    <state x="1080" y="-1440" width="1005" height="1466" key="search.everywhere.popup" timestamp="1629980643587">
       <screen x="303" y="-1440" width="2560" height="1440" />
     </state>
-    <state x="1080" y="-1440" width="1005" height="1466" key="search.everywhere.popup/0.0.1440.900/303.-1440.2560.1440@303.-1440.2560.1440" timestamp="1629961431841" />
+    <state x="1080" y="-1440" width="1005" height="1466" key="search.everywhere.popup/0.0.1440.900/303.-1440.2560.1440@303.-1440.2560.1440" timestamp="1629980643587" />
   </component>
 </project>
