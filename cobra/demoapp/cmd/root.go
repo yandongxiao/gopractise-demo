@@ -39,6 +39,13 @@ to quickly create a Cobra application.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
+	//	Run: func(cmd *cobra.Command, args []string) { },
+	PersistentPreRun: func(cmd *cobra.Command, args []string) {
+		fmt.Println("PersistentPreRun")
+	},
+	PersistentPostRun: func(cmd *cobra.Command, args []string) {
+		fmt.Println("PersistentPostRun")
+	},
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
