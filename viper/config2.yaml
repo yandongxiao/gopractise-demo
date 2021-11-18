@@ -1,4 +1,0 @@
-host-set:     host-set-config-file
-host-command: host-command-config-file
-host-env: host-env-config-file
-host-config: host-config-config-file
